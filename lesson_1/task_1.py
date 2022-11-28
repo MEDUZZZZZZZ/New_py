@@ -8,7 +8,7 @@
 # - 1 -> нет
 
 def take_args():
-    arg = int(input("Введите число обозначающую день недели: "))
+    arg = int(input("Введите число обозначающее день недели: "))
     if 0 < arg < 8:
         return arg
     else:
@@ -25,4 +25,4 @@ def is_day_off(day_num):
 if __name__ == '__main__':
     day = take_args()
     print(is_day_off(day))
-    
+
