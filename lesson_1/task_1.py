@@ -25,4 +25,3 @@ def is_day_off(day_num):
 if __name__ == '__main__':
     day = take_args()
     print(is_day_off(day))
-
