@@ -16,7 +16,5 @@ if __name__ == '__main__':
         number = take_args()
         binary_num = formated_binary(number)
         print(binary_num)
-        my_bin_sum = my_binary_calc(number)
-        print(my_bin_sum)
     except ValueError:
         print('Вы ввели число в неверном формате')
