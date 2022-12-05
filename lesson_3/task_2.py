@@ -14,6 +14,7 @@ def extended_mult(list_of_nums):
             res_list.append(res)
     return res_list
 
+
 def print_list(new_list):
     text = '['
     for idx, val in enumerate(new_list):
