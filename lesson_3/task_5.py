@@ -11,11 +11,11 @@ def fibonacci(num):
     if num == 1 or num == 2:
         return 1
     elif num > 2:
-        return fibonacci(num-1) + fibonacci(num-2)
+        return fibonacci(num - 1) + fibonacci(num - 2)
     elif num == 0:
         return 0
     elif num < 0:
-        return fibonacci(num+2) - fibonacci(num + 1)
+        return fibonacci(num + 2) - fibonacci(num + 1)
 
 
 def fib_list_former(num):
