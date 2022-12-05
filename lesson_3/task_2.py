@@ -26,5 +26,6 @@ def print_list(new_list):
 
 if __name__ == '__main__':
     my_list = [2, 3, 5, 6]
+    print(f'Исходный список: {print_list(my_list)}')
     result = extended_mult(my_list)
     print(print_list(result))
