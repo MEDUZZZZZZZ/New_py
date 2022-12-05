@@ -16,7 +16,7 @@ def form_list(lenght):
 
 
 def print_list(my_list):
-    text = f'Набор чисел заданной последовательности от 1 до {len(my_list)}:\n['
+    text = f'Набор чисел  последовательности от 1 до {len(my_list)}:\n['
     for idx, val in enumerate(my_list):
         if idx != len(my_list)-1:
             text += f'{val}, '
