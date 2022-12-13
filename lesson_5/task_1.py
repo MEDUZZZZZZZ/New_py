@@ -52,11 +52,11 @@ def rndm_choise(players):
     return winner
 
 
-def intodution_player(gm):
-    if gm == 1:
+def intodution_player(mode):
+    if mode == 1:
         first = input('Имя певрого игрока: ')
         second = input('Имя второго игрока: ')
-    elif gm == 2:
+    elif mode == 2:
         first = input('Имя певрого игрока: ')
         second = 'Компьютер'
     return [first, second]
