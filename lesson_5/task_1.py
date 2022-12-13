@@ -38,17 +38,17 @@ def computer_turn(gamer):
 
 
 def chose_game_mode():
-    print("Выберите игровой режим")
-    mode = int(input('1: 2 игрока\n2: игра с ИИ\n: '))
+    print("Выберите игровой режим\n")
+    mode = int(input('1: Два игрока\n2: игра с ИИ\n: '))
     return mode
 
 
 def rndm_choise(players):
     winner = random.randint(1, 2)
     if winner == 1:
-        print(f'Первым ходит {players[0]}')
+        print(f'Первым ходит {players[0]}\n')
     else:
-        print(f'Первым ходит {players[1]}')
+        print(f'Первым ходит {players[1]}\n')
     return winner
 
 
@@ -63,7 +63,7 @@ def intodution_player(mode):
 
 
 def perfect_game():
-    print("Игра запускается")
+    print("...\nИгра запускается\n...\n")
     game_mode = chose_game_mode()
     players = intodution_player(game_mode)
     order = rndm_choise(players)
@@ -72,7 +72,7 @@ def perfect_game():
             player_turn(players[0])
             order = 2
             if candys == 0:
-                print(f'Winner {players[0]}')
+                print(f'!===!Победил {players[0]}!===!')
                 break
         else:
             if game_mode == 2:
@@ -81,7 +81,7 @@ def perfect_game():
                 player_turn(players[1])
             order = 1
             if candys == 0:
-                print(f'Winner {players[1]}')
+                print(f'!===!Победил {players[1]}!===!')
                 break
             else:
                 continue

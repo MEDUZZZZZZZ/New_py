@@ -112,8 +112,8 @@ def win_condition(symbol, player):
                 return flag
             else:
                 continue
-    return flag
-        
+    return flag 
+
 
 def ex_zero_game():
     print('Приветствуем вас в игре крестики-нолики')
