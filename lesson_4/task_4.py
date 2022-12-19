@@ -10,18 +10,22 @@ def polinom_gen(k):
             continue
         elif number == 1:
             if i == 0:
-                pol += f'{number}'
+                pol += f' + {number}'
             elif i == 1:
-                pol += 'x + '
+                pol += ' + x'
+            elif i == k:
+                pol += f'x^{i}'
             else:
-                pol += f'x^{i} + '
+                pol += f' + x^{i}'
         else:
             if i == 0:
-                pol += f'{number}'
+                pol += f' + {number}'
             elif i == 1:
-                pol += f'{number}*x + '
+                pol += f' + {number}*x'
+            elif i == k:
+                pol += f'{number}*x^{i}'
             else:
-                pol += f'{number}*x^{i} + ' 
+                pol += f' + {number}*x^{i}'
     return pol
 
 

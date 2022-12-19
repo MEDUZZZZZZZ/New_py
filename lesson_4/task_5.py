@@ -42,19 +42,30 @@ def polinom_calc(first: dict, second: dict):
             big_dict[key] = value
         else:
             continue
+    for key, value in small_dict.items():
+        if not big_dict.get(key):
+            big_dict[key] = value
     return big_dict
 
 
 def get_pol_from_dict(pol_dict: dict):
     pol = ''
+    counter = 1
     for key, value in pol_dict.items():
         if key == 'constant':
-            pol += f'{value}'
+            pol += f' + {value}'
         else:
             if value == 1:
-                pol += f'{key} + '
+                if counter != 1:
+                    pol += f' + {key}'
+                else:
+                    pol += f'{key}'
             else:
-                pol += f'{value}*{key} + '
+                if counter != 1:
+                    pol += f' + {value}*{key}'
+                else: 
+                    pol += f'{value}*{key}'
+        counter += 1
     return pol
 
 
