@@ -1,13 +1,13 @@
-# Задайте последовательность чисел. 
-# Напишите программу, 
+# Задайте последовательность чисел.
+# Напишите программу,
 # которая выведет список неповторяющихся элементов исходной последовательности.
 from random import randint
 
 
 def generate_list():
     res = []
-    for i in range (12):
-        res.append(randint(1,5))
+    for i in range(12):
+        res.append(randint(1, 5))
     return res
 
 
