@@ -19,7 +19,7 @@ def polinom_gen(k):
             if i == 0:
                 pol += f'{number}'
             elif i == 1:
-                pol += f'{number}^x + '
+                pol += f'{number}*x + '
             else:
                 pol += f'{number}*x^{i} + ' 
     return pol
@@ -27,7 +27,6 @@ def polinom_gen(k):
 
 def save_pol(polinom, name_of_file='new_pol'):
     file_plath = Path('.', 'lesson_4', 'Files', f'{name_of_file}.txt')
-    print(file_plath)
     with open(file_plath, mode='w+', encoding='utf-8') as res_file:
         res_file.write(polinom)
     return 'Запись завершена'
@@ -41,6 +40,4 @@ if __name__ == '__main__':
         print(save_pol(my_polinom))
     except ValueError:
         print('Степень введена в неверном формате')
-
-# '../', 'Files', 5
 
