@@ -19,6 +19,8 @@ def revers_to_dict(polinom: str):
         if len(data) == 1:
             if data[0].isdigit():
                 polinom_dict['constant'] = int(data[0])
+            elif data[0] == '':
+                polinom_dict['constant'] = 0
             else:
                 polinom_dict[data[0]] = 1
         else:
