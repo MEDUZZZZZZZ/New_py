@@ -15,7 +15,7 @@ def add_user(new_user, id):
             writer = csv.writer(file, delimiter=";")
             writer.writerows(user_csv)
         with open("data_base.txt", mode='w+', encoding="utf-8") as txt_file:
-            txt_file.write(f'{user}')
+            txt_file.write('\n'.join(user))
 
 
 def get_data():
@@ -26,15 +26,6 @@ def get_data():
         with open("data_base.txt", mode='w+', encoding="utf-8") as file:
             return ''
 
-    
-    
-    #         reader = csv.reader(file)
-    #         for row in reader:
-    #             data += "\n".join(row)
-    #     return data
-    # except FileNotFoundError:
-    #     with open("data_base.csv", mode='w+', encoding="utf-8") as file:
-    #         return ''
 
 def update_data(updated_data):
     new_data = [i.split(" |-| ") for i in updated_data]
@@ -43,5 +34,4 @@ def update_data(updated_data):
         writer.writerows(new_data)
     with open("data_base.txt", mode='w+', encoding="utf-8") as txt_file:
         txt_file.write("\n".join(updated_data))
-
-        
+  
