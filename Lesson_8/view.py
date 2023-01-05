@@ -6,7 +6,7 @@ def input_for_search():
 
 def select_mode():
     return int(input("Выберите режим [1 - добавление]\n[2 - поиск]\
-                \n[3 - изменение]\n[4 - удаление]\n [5 - показать всех]: "))
+                \n[3 - изменение]\n[4 - удаление]\n [5 - остановить программу]: "))
 
 
 def new_user():
@@ -30,4 +30,7 @@ def clarification():
 
 def error_notification():
     print('Введено неправильное значение')
+
+def stop_program():
+    print("Завершение работы программы ...")
 

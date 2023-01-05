@@ -50,7 +50,8 @@ def delete_user():
 
 
 def menu():
-    while True:
+    flag = True
+    while flag:
         cur_mode = view.select_mode()
         if cur_mode == 1:
             add_new_user()
@@ -60,6 +61,9 @@ def menu():
             edit_user()
         elif cur_mode == 4:
             delete_user()
+        elif cur_mode == 5:
+            view.stop_program()
+            flag = False
         else: 
             view.error_notification()
 

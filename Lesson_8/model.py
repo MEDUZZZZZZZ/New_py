@@ -3,9 +3,6 @@ def assign_id(data):
         return 1
     else:
         last_line = data.split('\n')[len(data.split("\n")) - 2]
-        print(data)
-        print(len(data.split("\n")))
-        print(data.split('\n'))
         cur_id = last_line.split(" |-| ")[0]
         return int(cur_id) + 1
 
