@@ -22,15 +22,14 @@ def edit_user():
     data = logger.get_data()
     search_res = model.search_in_base(data, user)
     view.print_result(search_res)
-    if 'Пользователи по запросу не найдены' not in search_res[0] and len(data.split('\n')) > 1:
+    if 'Пользователи по запросу не найдены' not in search_res[0] and len(search_res) > 1:
         search_res = model.search_in_base(data, view.clarification())[0]
         new_user = view.new_user()
         edited_user = model.change_user_info(data, search_res, new_user)
         logger.update_data(edited_user)
     elif 'Пользователи по запросу не найдены' not in search_res[0]:
-        search_res = data.split("\n")[0]
         new_user = view.new_user()
-        edited_user = model.change_user_info(data, search_res, new_user)
+        edited_user = model.change_user_info(data, search_res[0], new_user)
         logger.update_data(edited_user)
 
 
@@ -39,13 +38,12 @@ def delete_user():
     data = logger.get_data()
     search_res = model.search_in_base(data, user)
     view.print_result(search_res)
-    if 'Пользователи по запросу не найдены' not in search_res[0] and len(data.split('\n')) > 1:
+    if 'Пользователи по запросу не найдены' not in search_res[0] and len(search_res) > 1:
         search_res = model.search_in_base(data, view.clarification())[0]
         edited_user = model.delete_user(data, search_res)
         logger.update_data(edited_user)
     elif 'Пользователи по запросу не найдены' not in search_res[0]:
-        search_res = data.split("\n")[0]
-        edited_user = model.delete_user(data, search_res)
+        edited_user = model.delete_user(data, search_res[0])
         logger.update_data(edited_user)
 
 

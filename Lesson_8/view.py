@@ -31,6 +31,7 @@ def clarification():
 def error_notification():
     print('Введено неправильное значение')
 
+
 def stop_program():
     print("Завершение работы программы ...")
 
