@@ -2,7 +2,7 @@ import telebot
 from telebot import types
 from random import randint, choice
 
-API_TOKEN = '5960431180:AAE0_T3_UM-vPfATvPdNQ7sZ5wTKAOTWPl4'
+API_TOKEN = ''
 
 bot = telebot.TeleBot(API_TOKEN)
 candys = 117
