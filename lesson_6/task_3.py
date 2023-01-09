@@ -6,6 +6,7 @@ def take_args():
     arg = int(input("Введите число: "))
     return arg
 
+
 if __name__ == '__main__':
     try:
         number = take_args()
